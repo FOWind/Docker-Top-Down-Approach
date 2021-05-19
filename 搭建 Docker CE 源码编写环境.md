@@ -10,7 +10,7 @@
 
 ```shell
 sudo su
-echo 'fs.inotify.max_user_watches=524288' > /etc/sysctl.conf 
+echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf 
 sysctl -p
 ```
 
@@ -174,7 +174,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 # 预发布软件源，不建议启用
 # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-' > /etc/apt/source.list
+' > /etc/apt/sources.list
 ```
 
 接着就是安装一系列的包

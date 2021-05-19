@@ -69,7 +69,7 @@ wget -c https://gomirrors.org/dl/go/go1.16.3.linux-amd64.tar.gz -O - | sudo tar 
 
 ```shell
 sudo su
-echo 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile
+echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
 exit
 source /etc/profile
 ```
@@ -87,8 +87,7 @@ go version
 
 ```shell
 sudo su
-echo 'export GOPROXY=https://goproxy.io,direct' > /etc/profile
-echo 'export GOPROXY=https://goproxy.io,direct' > /etc/profile
+echo 'export GOPROXY=https://goproxy.io,direct' >> /etc/profile
 exit
 source /etc/profile
 ```
@@ -192,9 +191,8 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     wget -c https://gomirrors.org/dl/go/go1.16.3.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-    echo 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile
-    echo 'export GOPROXY=https://goproxy.io,direct' > /etc/profile
-    echo 'export GOPROXY=https://goproxy.io,direct' > /etc/profile
+    echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
+    echo 'export GOPROXY=https://goproxy.io,direct' >> /etc/profile
     source /etc/profile
   SHELL
 end
